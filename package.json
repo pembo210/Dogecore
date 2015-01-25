@@ -1,6 +1,6 @@
 {
-  "name": "Litecore",
-  "description": "Litecoin Library",
+  "name": "Dogecore",
+  "description": "Dogecoin Library",
   "version": "0.1.39",
   "author": {
     "name": "pembo210",
@@ -17,7 +17,7 @@
   }
   ],
   "keywords": [
-    "litecoin",
+    "Dogecoin",
     "ltc",
     "satoshi",
     "money",
@@ -27,7 +27,7 @@
   "main": "bitcore.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pembo210/Litecore.git"
+    "url": "https://github.com/pembo210/Dogecore.git"
   },
   "scripts": {
     "install": "node-gyp rebuild",
