@@ -1,0 +1,106 @@
+{
+  "name": "Litecore",
+  "description": "Litecoin Library",
+  "version": "0.1.39",
+  "author": {
+    "name": "pembo210",
+    "email": "pembo210@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "FlappyDEV",
+      "email": "dev@goflap.io"
+    },
+    {
+    "name": "pembo210",
+    "email": "pembo210@gmail.com"
+  }
+  ],
+  "keywords": [
+    "litecoin",
+    "ltc",
+    "satoshi",
+    "money",
+    "currency",
+    "virtual"
+  ],
+  "main": "bitcore.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pembo210/Litecore.git"
+  },
+  "scripts": {
+    "install": "node-gyp rebuild",
+    "test": "node browser/build.js -a && node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --reporter spec test",
+    "prepublish": "node browser/build.js -a"
+  },
+  "dependencies": {
+    "asn1.js": "0.4.1",
+    "async": "~0.2.10",
+    "bignum": "=0.6.2",
+    "bindings": "=1.1.1",
+    "binary": "^0.3.0",
+    "bn.js": "=0.13.3",
+    "brfs": "=1.0.0",
+    "bufferput": "git://github.com/bitpay/node-bufferput.git",
+    "buffers": "=0.1.1",
+    "buffertools": "=2.1.2",
+    "browserify-buffertools": "git://github.com/maraoz/browserify-buffertools.git",
+    "elliptic": "=0.15.7",
+    "hash.js": "=0.3.1",
+    "jsrsasign": "=0.0.3",
+    "preconditions": "^1.0.7",
+    "protobufjs": "=3.0.0",
+    "sjcl": "=1.0.1",
+    "socks5-client": "~0.3.6"
+  },
+  "testling": {
+    "harness": "mocha-bdd",
+    "html": "test/index-testling.html",
+    "browsers": [
+      "ie/6..latest",
+      "chrome/22..latest",
+      "firefox/16..latest",
+      "safari/latest",
+      "opera/11.0..latest",
+      "iphone/6",
+      "ipad/6",
+      "android-browser/latest"
+    ]
+  },
+  "browser": {
+    "bignum": "./lib/browser/Bignum.js",
+    "buffertools": "browserify-buffertools",
+    "./lib/Key.js": "./lib/browser/Key.js",
+    "./lib/Point.js": "./lib/browser/Point.js",
+    "./lib/ECIES.js": "./lib/browser/ECIES.js",
+    "./lib/SecureRandom.js": "./lib/browser/SecureRandom.js",
+    "./lib/PayPro.js": "./lib/browser/PayPro.js"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "devDependencies": {
+    "browserify": "=3.40.0",
+    "chai": "=1.9.1",
+    "commander": "~2.2.0",
+    "coveralls": "^2.10.0",
+    "event-stream": "~3.1.5",
+    "express": "4.6.1",
+    "grunt-browserify": "~2.0.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-markdown": "~0.5.0",
+    "grunt-mocha-test": "~0.8.2",
+    "grunt-shell": "~0.6.4",
+    "gulp": "~3.8.2",
+    "gulp-concat": "~2.2.0",
+    "istanbul": "~0.2.6",
+    "mocha": ">=1.15.1",
+    "optimist": "0.6.1",
+    "request": "2.39.0",
+    "sinon": "^1.10.3",
+    "uglifyify": "=1.2.3"
+  }
+}
