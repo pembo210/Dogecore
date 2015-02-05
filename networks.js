@@ -8,9 +8,9 @@ exports.livenet = {
   name: 'livenet',
   magic: null, //needed to switch to rpcsync, wont sync auxpow blocks from .dat
   //magic: hex('c0c0c0c0'), //original dogecoin magic
-  addressVersion: 0x1e ,  // 22 23  for Axxxxxxx addr
+  addressVersion: 0x1e ,
   privKeyVersion: 0x9e,
-  P2SHVersion: 5,
+  P2SHVersion: 22,
   hkeyPublicVersion: 0x0488c42e,
   hkeyPrivateVersion: 0x0488e1f4,
   genesisBlock: {
